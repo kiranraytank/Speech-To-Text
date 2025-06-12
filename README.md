@@ -1,21 +1,19 @@
-# 🎙️ Azure Speech-to-Text in Python
+# 🎙️ Speech-to-Text Flask App using Azure
 
-This project demonstrates how to transcribe `.wav` audio files to text using **Azure Cognitive Services Speech SDK** in Python. It supports long audio files, continuous speech recognition, and Hindi/English language support.
+This is a simple Flask web application that allows users to upload `.wav` audio files and transcribe them using Microsoft Azure Speech-to-Text service.
 
-## 🔧 Features
+## ✨ Features
 
-- 🔁 **Continuous Speech Recognition** using `start_continuous_recognition()`
-- 🗣️ Supports **Hindi (`hi-IN`)** and **English (`en-US`)**
-- 🧪 Easily test with your own `.wav` files
-- ✅ Uses **Azure Free Tier** — 5 hours/month at no cost
+- Drag & drop `.wav` file upload
+- Transcribe audio using Azure Speech
+- Full and short transcript options
+- Friendly frontend UI
+- Error handling & flash messages
 
----
+## 🧪 Demo
 
-## 📦 Requirements
+Upload your `.wav` file and choose:
+- Short Transcription: Uses recognize_once for small audio clips.
+- Full Transcription: Uses continuous recognition (for longer clips).
 
-```bash
-pip install -r requirements.txt
-
-
-
-## 🗂️ Folder Structure
+## 📁 Folder Structure

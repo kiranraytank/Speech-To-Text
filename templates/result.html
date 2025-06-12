@@ -1,28 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>{{ title }}</title>
-    <style>
-        body { font-family: Arial; padding: 60px; background: #fff; }
-        h1 { color: #0078d4; }
-        pre {
-            white-space: pre-wrap; word-wrap: break-word;
-            background: #f4f4f4; padding: 20px; border-radius: 8px;
-            font-size: 16px;
-        }
-        a {
-            display: inline-block;
-            margin-top: 20px;
-            text-decoration: none;
-            color: #0078d4;
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>{{ title }}</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 50px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .transcript-box {
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 25px;
+      border-radius: 10px;
+      width: 80%;
+      margin: 20px auto;
+      text-align: left;
+      white-space: pre-wrap;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .button {
+      padding: 10px 20px;
+      margin-top: 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #0078d4;
+      color: white;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background-color: #005fa3;
+    }
+  </style>
 </head>
 <body>
-    <h1>{{ title }}</h1>
-    <pre>{{ transcript }}</pre>
-    <a href="/">⟵ Back to Home</a>
+  <h1>{{ title }}</h1>
+
+  <div class="transcript-box">
+    {{ transcript }}
+  </div>
+
+  <a href="/" class="button">🔁 Transcribe Another File</a>
 </body>
 </html>
