@@ -1,0 +1,4 @@
+
+# install required packages 
+azure-cognitiveservices-speech==1.30.0
+
