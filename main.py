@@ -8,9 +8,9 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
-# Load T5 summarization model and tokenizer
-tokenizer = T5Tokenizer.from_pretrained("t5-small")
-model = T5ForConditionalGeneration.from_pretrained("t5-small")
+# # Load T5 summarization model and tokenizer
+# tokenizer = T5Tokenizer.from_pretrained("t5-small")
+# model = T5ForConditionalGeneration.from_pretrained("t5-small")
 
 def summarize_text(text):
     input_text = "summarize: " + text.strip()
@@ -99,7 +99,9 @@ def transcribe():
         summary = ""
         allow_pdf = False
     else:
-        summary = summarize_text(result)
+        # summary = summarize_text(result)
+        # sometime STOP to this code run
+        summary = ""
         allow_pdf = True
 
     return render_template("result.html", title=title, transcript=result, summary=summary, filename=filename_var, allow_pdf=allow_pdf)
