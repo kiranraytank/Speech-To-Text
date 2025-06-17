@@ -106,7 +106,11 @@ def transcribe():
 
     return render_template("result.html", title=title, transcript=result, summary=summary, filename=filename_var, allow_pdf=allow_pdf)
 
+# if __name__ == '__main__':
+#     app.secret_key = 'RayTank343mddsnfdsn'
+#     app.run(debug=True)
 
 if __name__ == '__main__':
     app.secret_key = 'RayTank343mddsnfdsn'
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))  # Use Render's port or default to 5000
+    app.run(host='0.0.0.0', port=port, debug=True)
