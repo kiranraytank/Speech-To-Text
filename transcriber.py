@@ -7,11 +7,14 @@ speech_key = os.getenv("AZURE_SPEECH_KEY")
 service_region = os.getenv("AZURE_SPEECH_REGION")
 
 def transcribe_short_audio(audio_path):
+    print("service_region........")
+    print(service_region)
     speech_config = speechsdk.SpeechConfig(subscription=speech_key, region=service_region)
     audio_input = speechsdk.AudioConfig(filename=audio_path)
     recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config, audio_config=audio_input)
 
     result = recognizer.recognize_once()
+    print(result)
     return result.text if result.reason == speechsdk.ResultReason.RecognizedSpeech else "No speech recognized."
 
 def transcribe_full_audio(audio_path):
