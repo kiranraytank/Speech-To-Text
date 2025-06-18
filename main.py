@@ -57,9 +57,13 @@ def download_pdf():
         return f"PDF Generation Failed: {str(e)}", 500
 
 
+# @app.route('/')
+# def home():
+#     return render_template('index.html')
+
 @app.route('/')
-def home():
-    return render_template('index.html')
+def index():
+    return "App is working"
 
 
 @app.route('/transcribe', methods=['POST'])
