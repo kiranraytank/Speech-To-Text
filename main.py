@@ -106,6 +106,11 @@ def transcribe():
 
     return render_template("result.html", title=title, transcript=result, summary=summary, filename=filename_var, allow_pdf=allow_pdf)
 
+@app.route('/healthz')
+def health_check():
+    return "OK", 200
+
+
 # if __name__ == '__main__':
 #     app.secret_key = 'RayTank343mddsnfdsn'
 #     app.run(debug=True)
