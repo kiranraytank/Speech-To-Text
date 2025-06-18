@@ -111,6 +111,7 @@ def transcribe():
 #     app.run(debug=True)
 
 if __name__ == '__main__':
-    app.secret_key = 'RayTank343mddsnfdsn'
+    # app.secret_key = 'RayTank343mddsnfdsn'
     port = int(os.environ.get('PORT', 5000))  # Use Render's port or default to 5000
-    app.run(host='0.0.0.0', port=port, debug=True)
+    # app.run(host='0.0.0.0', port=port, debug=True)
+    app.run(host='0.0.0.0', port=port)
